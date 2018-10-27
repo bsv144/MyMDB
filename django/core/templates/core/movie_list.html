@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    
+{% endblock %} 
+<ul>
+ {% for movie in object_list %}
+    <li>{{ movie }}</li>
+ {% empty %}
+    <li> No movies yet. </li>
+ {% endfor %}
+</ul>
+<p>
+ Using https?
+ {{ request.s_secure|yesno }}
+</p>
